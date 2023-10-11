@@ -880,19 +880,19 @@ function gotContact(player, otherThing)
         otherThing.moved = true
     }
 
-    if (player.x < human.x - 50px)
+    if (player.x < human.x - 150px)
     {
         human.setVelocityX(-100)
         human.anims.play('left_h', true);
-        console.log("chase left")
+        console.log("chase left waaaaaaaaaaa")
         humanLeft = false
     }
 
-    if (player.x > human.x + 50px)
+    if (player.x > human.x + 150px)
     {
         human.setVelocityX(100)
         human.anims.play('right_h', true);
-        console.log("chase right")
+        console.log("chase right waaaaaaaaaaaaaaaaa")
         humanLeft = false
     }
     
