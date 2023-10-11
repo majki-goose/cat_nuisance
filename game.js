@@ -880,7 +880,7 @@ function gotContact(player, otherThing)
         otherThing.moved = true
     }
 
-    if (player.x < human.x - 150px)
+    if (player.x < human.x - 150)
     {
         human.setVelocityX(-100)
         human.anims.play('left_h', true);
@@ -888,7 +888,7 @@ function gotContact(player, otherThing)
         humanLeft = false
     }
 
-    if (player.x > human.x + 150px)
+    if (player.x > human.x + 150)
     {
         human.setVelocityX(100)
         human.anims.play('right_h', true);
