@@ -801,14 +801,14 @@ function movePlayer()
     
 
     // If A is pressed
-    if (wsadKeys.A.isDown)
+    if ((wsadKeys.A.isDown) || (cursorKeys.left.isDown)) 
     {
         // Start the cat moving left in the world
         player.setVelocityX(-400)
         player.anims.play('left', true);
     }
     // if A isn't pressed, but D is...
-    else if (wsadKeys.D.isDown)
+    else if ((wsadKeys.D.isDown) || (cursorKeys.right.isDown))
     {
         // Start the cat moving right in the world
         player.setVelocityX(400)
@@ -820,12 +820,12 @@ function movePlayer()
         player.anims.play('turn');
     }
 
-    if (Phaser.Input.Keyboard.JustDown(wsadKeys.W) && player.body.touching.down)
+    if ((Phaser.Input.Keyboard.JustDown(wsadKeys.W) && player.body.touching.down) || (Phaser.Input.Keyboard.JustDown(cursorKeys.up) && player.body.touching.down))
     {
         player.setVelocityY(-900)
         //player.body.velocity.add()
     }
-    else if (wsadKeys.S.isDown)
+    else if ((wsadKeys.S.isDown) || (cursorKeys.down.isDown))
     {
         player.setVelocityY(100)
     }
