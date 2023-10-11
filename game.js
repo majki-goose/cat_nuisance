@@ -820,7 +820,7 @@ function movePlayer()
         player.anims.play('turn');
     }
 
-    if ((Phaser.Input.Keyboard.JustDown(wsadKeys.W) && player.body.touching.down) || (Phaser.Input.Keyboard.JustDown(cursorKeys.up) && player.body.touching.down))
+    if ((Phaser.Input.Keyboard.JustDown(wsadKeys.W) && player.body.touching.down) || (Phaser.Input.Keyboard.JustDown(cursorKeys.up) && player.body.touching.down) || (Phaser.Input.Keyboard.JustDown(cursorKeys.space) && player.body.touching.down))
     {
         player.setVelocityY(-900)
         //player.body.velocity.add()
